@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Quizffy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="D:\New folder\project\quiz-webpage\src\images\pngwing.com (1).png" alt="Quizffy Logo" class="logo">
+            <h1>Quizffy</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="category.html">Categories</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a> <!-- Updated link -->
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h1 class="title">About <span class="highlight">Quizzfy</span></h1>
+            <p class="tagline">Learn. Compete. Conquer.</p>
+            <p class="description">
+                Quizzfy is your gateway to exciting quizzes that test your brain and boost your skills. With categories ranging from science to coding, every quiz is crafted to challenge, entertain, and educate.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>🧠 Smart Quizzes</h3>
+                    <p>Adaptive questions based on your performance.</p>
+                </div>
+                <div class="feature">
+                    <h3>⏳ Time Challenges</h3>
+                    <p>Race against the clock and test your speed.</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 Leaderboard</h3>
+                    <p>Climb the ranks and earn your bragging rights!</p>
+                </div>
+                <div class="feature">
+                    <h3>📚 Multiple Categories</h3>
+                    <p>Explore quizzes across a variety of topics.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 Beautiful UI</h3>
+                    <p>Enjoy a seamless and visually appealing experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="core-features">
+        <h2>Core Features</h2>
+        <div class="feature-blocks">
+            <div class="feature" data-aos="fade-up">
+                <img src="D:\New folder\project\quiz-webpage\src\images\qa.jpg" alt="Randomized Questions">
+                <h3>Randomized Questions</h3>
+                <p>Each quiz reshuffles the questions to keep the experience fresh and challenging.</p>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                <img src="D:\New folder\project\quiz-webpage\src\images\q.jpg" alt="Difficulty Levels">
+                <h3>Difficulty Levels</h3>
+                <p>Choose between Easy, Medium, and Hard levels to match your skillset.</p>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="400">
+                <img src="D:\New folder\project\quiz-webpage\src\images\paper.jpg" alt="Save Progress">
+                <h3>Save Progress</h3>
+                <p>Resume your quiz anytime and pick up right where you left off.</p>
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="600">
+                <img src="D:\New folder\project\quiz-webpage\src\images\doubt.jpg" alt="Review Mode">
+                <h3>Review Mode</h3>
+                <p>Review your answers after completing the quiz to learn from your mistakes.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Technology Stack Section -->
+    <section id="tech-stack">
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>LocalStorage for data persistence</li>
+            <li>Responsive design with Flexbox and Grid</li>
+            <li>Animations with AOS.js</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-blocks">
+            <div class="testimonial">
+                <img src="D:\New folder\project\quiz-webpage\src\images\3 img.jpeg"alt="Sarah J." class="testimonial-img">
+                <p>"Quizffy has made learning so much fun! I love the interactive quizzes."</p>
+                <h4>- Sarah J.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="D:\New folder\project\quiz-webpage\src\images\quizz (1).jpg"alt="John D." class="testimonial-img">
+                <p>"The leaderboard feature keeps me motivated to improve my score."</p>
+                <h4>- John D.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="D:\New folder\project\quiz-webpage\src\images\quizz (2).jpg" alt="Emily R." class="testimonial-img">
+                <p>"The design is so clean and responsive. Works perfectly on my phone!"</p>
+                <h4>- Emily R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Quizffy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

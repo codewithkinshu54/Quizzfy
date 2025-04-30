@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizffy - Leaderboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="D:\New folder\project\quiz-webpage\src\images\pngwing.com (1).png" alt="Quizffy Logo" class="logo">
+            <h1>Quizffy</h1>
+        </div>
+    </header>
+
+    
+        </div>
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-list">
+                <!-- Leaderboard entries will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section class="leaderboard-container">
+        <h1 class="top-performers-title">🏆 <span>Top Performers</span></h1>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter">
+            <input type="text" id="search-bar" placeholder="Search by name..." />
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="GK">General Knowledge</option>
+                <option value="Coding">Coding</option>
+            </select>
+        </div>
+
+        <!-- Top 3 Highlighted Users -->
+        <div class="top-3">
+            <div class="card gold">
+                <img src="https://i.pravatar.cc/100?img=1" alt="User">
+                <h3>🥇 Alex</h3>
+                <p>Score: 98 | Math</p>
+            </div>
+            <div class="card silver">
+                <img src="https://i.pravatar.cc/100?img=2" alt="User">
+                <h3>🥈 Jamie</h3>
+                <p>Score: 95 | Science</p>
+            </div>
+            <div class="card bronze">
+                <img src="https://i.pravatar.cc/100?img=3" alt="User">
+                <h3>🥉 Riley</h3>
+                <p>Score: 90 | GK</p>
+            </div>
+        </div>
+
+        <!-- Leaderboard Table -->
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Category</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-data">
+                <!-- JS Injected Rows -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quizffy. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/leaderboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizfy - Categories</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="src/images/pngwing.com (1).png" alt="Quizffy Logo" class="logo">
+            <h1>Quizfy</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="category.html" class="active">Categories</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Categories Hero Section -->
+    <section class="category-hero">
+        <div class="animated-bg"></div>
+        <div class="category-hero-content">
+            <h1>Quiz Categories</h1>
+            <p>Choose a topic and test your knowledge with our engaging quizzes!</p>
+        </div>
+    </section>
+
+    <!-- Categories Main Section -->
+    <section class="categories-section">
+        <div class="categories-container">
+            <!-- Science Category -->
+            <div class="category-card" data-category="science" data-aos="fade-up">
+                <div class="category-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <div class="category-content">
+                    <h2>Science</h2>
+                    <div class="category-description">
+                        <p>Test your knowledge of chemistry, physics, biology and the natural world.</p>
+                    </div>
+                    <div class="category-meta">
+                        <span><i class="fas fa-question-circle"></i> 3 Questions</span>
+                        <span><i class="fas fa-star"></i> Beginner</span>
+                    </div>
+                    <div class="subcategories">
+                        <span class="tag">Chemistry</span>
+                        <span class="tag">Physics</span>
+                        <span class="tag">Biology</span>
+                    </div>
+                    <button class="select-category-btn" data-category="science">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- History Category -->
+            <div class="category-card" data-category="history" data-aos="fade-up" data-aos-delay="100">
+                <div class="category-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div class="category-content">
+                    <h2>History</h2>
+                    <div class="category-description">
+                        <p>Challenge yourself on historical events, figures, and world-changing moments.</p>
+                    </div>
+                    <div class="category-meta">
+                        <span><i class="fas fa-question-circle"></i> 3 Questions</span>
+                        <span><i class="fas fa-star"></i> Intermediate</span>
+                    </div>
+                    <div class="subcategories">
+                        <span class="tag">World Wars</span>
+                        <span class="tag">US History</span>
+                        <span class="tag">Ancient History</span>
+                    </div>
+                    <button class="select-category-btn" data-category="history">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- General Knowledge Category -->
+            <div class="category-card" data-category="general" data-aos="fade-up" data-aos-delay="200">
+                <div class="category-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="category-content">
+                    <h2>General Knowledge</h2>
+                    <div class="category-description">
+                        <p>Test your knowledge on a variety of topics from geography to language and culture.</p>
+                    </div>
+                    <div class="category-meta">
+                        <span><i class="fas fa-question-circle"></i> 3 Questions</span>
+                        <span><i class="fas fa-star"></i> All Levels</span>
+                    </div>
+                    <div class="subcategories">
+                        <span class="tag">Geography</span>
+                        <span class="tag">Languages</span>
+                        <span class="tag">Cultures</span>
+                    </div>
+                    <button class="select-category-btn" data-category="general">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Mathematics Category -->
+            <div class="category-card" data-category="mathematics" data-aos="fade-up" data-aos-delay="300">
+                <div class="category-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="category-content">
+                    <h2>Mathematics</h2>
+                    <div class="category-description">
+                        <p>Challenge your numerical and problem-solving skills with our math quizzes.</p>
+                    </div>
+                    <div class="category-meta">
+                        <span><i class="fas fa-question-circle"></i> Coming Soon</span>
+                        <span><i class="fas fa-star"></i> Various Levels</span>
+                    </div>
+                    <div class="subcategories">
+                        <span class="tag">Algebra</span>
+                        <span class="tag">Geometry</span>
+                        <span class="tag">Statistics</span>
+                    </div>
+                    <button class="select-category-btn" data-category="mathematics" disabled>Coming Soon</button>
+                </div>
+            </div>
+
+            <!-- Technology Category -->
+            <div class="category-card" data-category="technology" data-aos="fade-up" data-aos-delay="400">
+                <div class="category-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="category-content">
+                    <h2>Technology</h2>
+                    <div class="category-description">
+                        <p>Test your knowledge about computers, software, internet, and modern gadgets.</p>
+                    </div>
+                    <div class="category-meta">
+                        <span><i class="fas fa-question-circle"></i> Coming Soon</span>
+                        <span><i class="fas fa-star"></i> Various Levels</span>
+                    </div>
+                    <div class="subcategories">
+                        <span class="tag">Computers</span>
+                        <span class="tag">Internet</span>
+                        <span class="tag">Gadgets</span>
+                    </div>
+                    <button class="select-category-btn" data-category="technology" disabled>Coming Soon</button>
+                </div>
+            </div>
+
+            <!-- Sports Category -->
+            <div class="category-card" data-category="sports" data-aos="fade-up" data-aos-delay="500">
+                <div class="category-icon">
+                    <i class="fas fa-football-ball"></i>
+                </div>
+                <div class="category-content">
+                    <h2>Sports</h2>
+                    <div class="category-description">
+                        <p>Challenge your knowledge about various sports, athletes, and sporting events.</p>
+                    </div>
+                    <div class="category-meta">
+                        <span><i class="fas fa-question-circle"></i> Coming Soon</span>
+                        <span><i class="fas fa-star"></i> Various Levels</span>
+                    </div>
+                    <div class="subcategories">
+                        <span class="tag">Football</span>
+                        <span class="tag">Olympics</span>
+                        <span class="tag">Cricket</span>
+                    </div>
+                    <button class="select-category-btn" data-category="sports" disabled>Coming Soon</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Quizffy. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="src/images/facbook.png" alt="Facebook"></a>
+                <a href="#"><img src="src/images/twit.png" alt="X-post"></a>
+                <a href="#"><img src="src/images/insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/category.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizfy - Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="src/images/pngwing.com (1).png" alt="Quizffy Logo" class="logo">
+            <h1>Quizfy</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="category.html">Categories</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="quiz-container">
+        <div class="quiz-header">
+            <h2 id="category-title">Quiz</h2>
+            <div class="quiz-info">
+                <span id="question-number">Question 1/3</span>
+                <span id="timer">Time: 0:00</span>
+                <span id="score">Score: 0</span>
+            </div>
+        </div>
+        
+        <div class="quiz-content">
+            <h3 id="question-text">Question text will appear here</h3>
+            
+            <div class="options-container" id="options-container">
+                <!-- Options will be populated dynamically -->
+            </div>
+            
+            <div class="quiz-navigation">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+                <button id="submit-btn" style="display: none;">Submit Quiz</button>
+            </div>
+        </div>
+        
+        <div id="results-container" style="display: none;">
+            <h2>Quiz Results</h2>
+            <p>Your score: <span id="final-score">0</span>/3</p>
+            <button id="retry-btn">Try Again</button>
+            <button id="home-btn">Back to Categories</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Quizffy. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="src/images/facbook.png" alt="Facebook"></a>
+                <a href="#"><img src="src/images/twit.png" alt="X-post"></a>
+                <a href="#"><img src="src/images/insta.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>
