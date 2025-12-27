@@ -1,5 +1,8 @@
 # Quizfy
 
+## 🚀 Live Demo
+👉 https://codewithkinshu54.github.io/Quizzfy/
+
 Quizfy is an interactive quiz web application that challenges users with fun and engaging quizzes across multiple categories.
 
 ![Quizfy Logo](src/images/pngwing.com%20(1).png)
