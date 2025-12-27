@@ -3,18 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizffy - Contact Us</title>
+    <title>Contact Us - Quizfy</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-hero {
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            background-image: linear-gradient(135deg, rgba(46, 125, 50, 0.9), rgba(27, 94, 32, 0.9)), url('src/images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('src/images/pattern.svg');
+            opacity: 0.1;
+        }
+        
+        .contact-hero-content {
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-title i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(46, 125, 50, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+        
+        .contact-details p {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        
+        .contact-form-container {
+            background: white;
+            border-radius: 10px;
+            padding: 35px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        .form-submit:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .social-contact {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(46, 125, 50, 0.1);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .map-container {
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .form-message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #2e7d32;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        .form-message.error {
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #d32f2f;
+            border: 1px solid rgba(244, 67, 54, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
-            <img src="D:\New folder\project\quiz-webpage\src\images\pngwing.com (1).png" alt="Quizffy Logo" class="logo">
-            <h1>Quizffy</h1>
+            <img src="src/images/pngwing.com (1).png" alt="Quizfy Logo" class="logo">
+            <h1>Quizfy</h1>
         </div>
         <nav>
             <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
             <a href="category.html">Categories</a>
             <a href="leaderboard.html">Leaderboard</a>
             <a href="about.html">About</a>
@@ -22,31 +272,135 @@
         </nav>
     </header>
 
-    <!-- Contact Us Section -->
-    <section id="contact-section">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feedback, or suggestions, feel free to reach out to us!</p>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you! Send us your questions, feedback, or suggestions.</p>
+        </div>
+    </section>
+
+    <!-- Contact Main Section -->
+    <section class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3 class="contact-title"><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.03606167886!2d-74.25986548248684!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1637309850935!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact-details">
+                    <p><strong>Quizfy Headquarters</strong></p>
+                    <p>123 Learning Street, Knowledge City</p>
+                    <p>New York, NY 10001, USA</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3 class="contact-title"><i class="fas fa-envelope"></i> Contact Details</h3>
+                <div class="contact-details">
+                    <p><strong>General Inquiries:</strong> info@quizfy.com</p>
+                    <p><strong>Support:</strong> support@quizfy.com</p>
+                    <p><strong>Business:</strong> partners@quizfy.com</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                </div>
+                
+                <h3 class="contact-title" style="margin-top: 20px;"><i class="fas fa-clock"></i> Working Hours</h3>
+                <div class="contact-details">
+                    <p><strong>Monday-Friday:</strong> 9:00 AM - 6:00 PM (EST)</p>
+                    <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM (EST)</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+                <h2>Send Us a Message</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Send Message</button>
+                
+                <div id="form-message" class="form-message"></div>
+                
+                <div class="social-contact">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Quizffy. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Quizfy. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><img src="src/images/facbook.png" alt="Facebook"></a>
+                <a href="#"><img src="src/images/twit.png" alt="X-post"></a>
+                <a href="#"><img src="src/images/insta.png" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            e.target.reset();
+            
+            const formMessage = document.getElementById('form-message');
+            const name = document.getElementById('name').value;
+            
+            // Simple form validation
+            if (document.getElementById('name').value.trim() === '' ||
+                document.getElementById('email').value.trim() === '' ||
+                document.getElementById('subject').value.trim() === '' ||
+                document.getElementById('message').value.trim() === '') {
+                
+                formMessage.textContent = 'Please fill in all fields';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 3000);
+                
+                return;
+            }
+            
+            // Display success message
+            formMessage.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+            formMessage.className = 'form-message success';
+            formMessage.style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
         });
     </script>
 </body>

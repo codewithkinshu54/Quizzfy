@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Check if user is logged in
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    
+    // If not logged in, redirect to login page
+    if (!isLoggedIn) {
+        window.location.href = 'login.html';
+        return;
+    }
+    
     const categoryButtons = document.querySelectorAll('.select-category-btn:not([disabled])');
     
     categoryButtons.forEach(button => {
